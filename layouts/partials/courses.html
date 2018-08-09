@@ -1,0 +1,52 @@
+{{ if .Site.Data.courses.enable }}
+{{ "<!-- Start Portfolio Section -->" | safeHTML }}
+<section class="courses section" id="courses">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="title text-center">
+                    {{ with .Site.Data.courses.topTitle }}
+                        <h4>{{ . }}</h4>
+                    {{ end }}
+                    {{ with .Site.Data.courses.title }}
+                        <h2>{{ . }}</h2>
+                        <span class="border"></span>
+                    {{ end }}
+                    {{ with .Site.Data.courses.subtitle }}
+                        <p>{{ . }}</p>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="courses-filter">
+                    <button type="button" data-filter="all">All</button>
+                    {{ range .Site.Data.courses.filtermenu }}
+                        <button type="button" data-filter=".{{ .category }}">{{ .name }}</button>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="row courses-items-wrapper">
+            {{ range .Site.Data.courses.item }}
+                <div class="col-6 col-md-4 padding-0 mix {{.category}}">
+                    <div class="courses-block">
+                        <img class="img-fluid" src="{{ .image | absURL }}" alt="courses-image">
+                        <div class="caption">
+                            <a class="search-icon" href="{{ .image | absURL }}" data-lightbox="image-1">
+                                <i class="tf-ion-ios-search-strong"></i>
+                            </a>
+                            <h4>
+                                <a href="">{{ .title }}</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+    <!-- end row -->
+</section>
+{{ "<!-- End section -->" | safeHTML }}
+{{ end }}

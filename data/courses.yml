@@ -1,0 +1,42 @@
+enable  : true
+topTitle: Learn & Develop
+title   : OUR COURSES
+subtitle: Learn to Develop, Develop to Learn
+
+filtermenu :
+  - name      : Agile
+    category  : agile
+
+  - name      : Teamwork
+    category  : teamwork
+
+  - name      : Development
+    category  : development
+
+  - name      : Quality
+    category  : quality
+
+item   :
+  - title : Secure Development
+    image : images/portfolio/portfolio-1.jpg
+    category  : development quality
+
+  - title : Agile Testing
+    image : images/portfolio/portfolio-2.jpg
+    category  : agile quality development teamwork
+
+  - title : Python in 50 hours
+    image : images/portfolio/portfolio-3.jpg
+    category  : development
+
+  - title : Latest Trends
+    image : images/portfolio/portfolio-4.jpg
+    category  : development
+
+  - title : Advanced Development Techniques
+    image : images/portfolio/portfolio-5.jpg
+    category  : development
+
+  - title : TDD
+    image : images/portfolio/portfolio-6.jpg
+    category  : development
