@@ -18,7 +18,7 @@ filtermenu :
 
 item   :
   - title : Secure Development
-    image : images/portfolio/portfolio-1.jpg
+    image : images/courses/secure-development.jpg
     category  : development quality
 
   - title : Agile Testing
